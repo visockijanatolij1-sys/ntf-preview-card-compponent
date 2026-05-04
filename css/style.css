@@ -112,6 +112,9 @@ body{
     left: 0;
     background-color: hsl(215, 32%, 27%);
 }
+.card-block_left img{
+    display: none;
+}
 .card__number{
     color: hsl(178, 100%, 50%);
     font-size: 28px;
@@ -167,4 +170,58 @@ body{
 .card__author-name span:hover{
     color: hsl(178, 100%, 50%);
     transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 767px) {
+    .card{
+        max-width: 475px;
+        width: 100%;
+        padding: 10px;
+        margin: 20px 0;
+        gap: 15px;
+    }
+    .card__title{
+        font-size: 24px;
+    }
+    .card__text{
+        font-size: 18px;
+    }
+    .card__number{
+        padding: 0;
+        font-size: 18px;
+    }
+    .card__number::before{
+        opacity: 0;
+    }
+    .card-block::before{
+        top: 34px;
+    }
+    .card-block_left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .card-block_left img{
+        display: block;
+    }
+    .card__time{
+        font-size: 18px;
+        padding-left: 20px;
+    }
+    .card__time::before{
+        width: 18px;
+        height: 18px;
+        top: 3px;
+        left: -5px;
+    }
+    .card-footer{
+        margin-top: 10px;
+    }
+    .card-footer img{
+        width: 33px;
+    }
+    .card__author-name{
+        font-size: 18px;
+    }
 }
