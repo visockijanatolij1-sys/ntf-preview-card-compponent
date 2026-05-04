@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: hsl(217, 54%, 11%); 
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.card{
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 10px 10px 10px 10px #161515;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 720px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.card__image{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.card__image::before{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    background: hsla(178, 100%, 50%, 0.158);
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease 0s;
+}
+.card__image::after{
+    content: "";
+    width: 46px;
+    height: 42px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../img/icon-view.svg"); 
+    opacity: 0;   
+    top: 45%;
+    left: 45%;
+    transition: all 0.3s ease 0s;
+}
+
+.card__image:hover::after{
+    opacity: 1;
+}
+.card__image:hover::before {
+    opacity: 1;
+}
+
+.card__image img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card__title{
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+.card__title span{
+    font-weight: 600;
+}
+
+.card__title:hover{
+    color: hsl(178, 100%, 50%);
+    transition: all 0.3s ease 0s;
+}
+.card__text{
+    font-size: 30px;
+    color: hsl(215, 32%, 27%);
+}
+.card-block{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.card-block::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 55px;
+    left: 0;
+    background-color: hsl(215, 32%, 27%);
+}
+.card__number{
+    color: hsl(178, 100%, 50%);
+    font-size: 28px;
+    padding-left: 34px;
+    position: relative;
+}
+.card__number::before{
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 45px;
+    left: 0;
+    top: -7px;
+    background: url("../img/icon-ethereum.svg") no-repeat center / cover; 
+}
+.card__time{
+    font-size: 24px;
+    color: hsl(215, 32%, 27%);
+    padding-left: 34px;
+    position: relative;
+}
+
+.card__time::before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 5px;
+    left: 0;
+    background: url("../img/icon-clock.svg") no-repeat center / cover;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+.card__author-image{
+    width: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.card__author-name{
+    color: hsl(215, 32%, 27%);
+    font-size: 24px;
+    cursor: pointer;
+}
+.card__author-name span{
+    color: #fff;
+}
+.card__author-name span:hover{
+    color: hsl(178, 100%, 50%);
+    transition: all 0.3s ease 0s;
+}
